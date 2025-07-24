@@ -1,7 +1,7 @@
 import express from "express";
-import User from "./model/user.model.js";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import userRouter from "./routes/user.route.js";
 
 // import cors from 'cors';
 
@@ -18,5 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+app.use("/api/user", userRouter);
 
 export default app;

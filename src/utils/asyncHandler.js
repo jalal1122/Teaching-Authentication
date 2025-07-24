@@ -5,3 +5,5 @@ const asyncHandler = (requestHanlder) => {
     });
   };
 };
+
+export default asyncHandler;
